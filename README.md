@@ -10,8 +10,10 @@ In the project directory, you can run:
 
 ### `npm run start`
 
+# app will open on http://localhost:3001/
+
 # To run server
 
-# cd server
+### cd server
 
-# npm run start
+### npm run start
