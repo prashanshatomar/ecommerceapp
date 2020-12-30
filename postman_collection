@@ -1,0 +1,54 @@
+Add product
+url : http://localhost:3000/
+Type: POST
+Form data : {
+    {
+        "name":"iphone11",
+        "price":"9999888",
+        "discount": "77"
+    }
+}
+
+Delete product
+url : http://localhost:3000/:id
+Type: DELETE
+
+Get Single product details
+url : http://localhost:3000/product/:id
+Type: POST
+
+
+Update product
+url : http://localhost:3000/
+Type: PATCH
+Form data : //pass any field which user want to update
+{
+    {
+        "name":"iphone11",
+        "price":"9999888",
+        "discount": "77"
+    }
+}
+
+
+To get sorted product data
+url : http://localhost:3000/sort/
+Type: POST
+Form data : //pass any field which user want to update
+keyName can be --> name, price, discount
+keyvalue can be --> 1 asc, -1 for desc
+{
+    {
+        "keyName":"price",
+        "keyvalue":"9999888"
+    }
+}
+
+
+To add order
+url : http://localhost:3000/order/
+Type: POST
+Form data : 
+{
+    product: [array of product]
+}
