@@ -12,9 +12,9 @@ const reducer = function (
       );
       if (index >= 0) {
         //item exist in the list
-        newCart.splice(index, 1);
+        let extrctItem = newCart.splice(index, 1);
         state = { ...state, cart: newCart };
-        action.payload.quantity = action.payload.quantity + 1; //increase quantity as item already in the list
+        action.payload.quantity = extrctItem[0].quantity + 1; //increase quantity as item already in the list
       }
       // console.log("index  -> ", state.cart, action.payload);
       return { ...state, cart: [...state.cart, action.payload] };
